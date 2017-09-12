@@ -12,12 +12,12 @@ function array_amitoz($incoming_array, $number_of_elements, $start_element=0) {
     // промежуточный массив
     $medium_array = array();
     for($i=$start_element; $i<count($incoming_array); $i++){
+        $medium_array[] = $incoming_array[$i];
     // пишем в массив определенное кол-во элементов
         if(count($medium_array) == $number_of_elements){
             $big_arr[] = $medium_array;
             $medium_array = [];
-        }
-        $medium_array[] = $incoming_array[$i];
+        } 
     }
     return $big_arr;
 }
